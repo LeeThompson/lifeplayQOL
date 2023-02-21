@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: move_to_backyard
+ACTION_NAME: Move to backyard
+WHERE: home
+WHEN: 0 - 24
+MINUTES: 2-3
+TIMEOUT_MINUTES: 0
+ALSO_TIMEOUT: 
+EFFECTS: 
+CONDITIONS: stock_backyard > 0.9 (STAT_COMPARE)
+MOVE_FIRST: 
+SCENE_ALWAYS: move_to_backyard
+ANIMATION: 

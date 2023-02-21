@@ -1,0 +1,9 @@
+STAT_ID: stock_in_backyard
+STAT_NAME: In Backyard; Player is in backyard
+PLAYER_ONLY: true
+HIGHER_BETTER: true
+STAT_MIN: 0
+STAT_MAX: 1
+DAILY_CHANGE: 0
+DEFAULT_VALUE: 0
+NPC_ONLY: false

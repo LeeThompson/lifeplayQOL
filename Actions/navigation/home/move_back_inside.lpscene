@@ -5,10 +5,11 @@ WHO: none
 OTHER:
 
 SceneStart()
-setBackground(home)
+setBackgroundCustom(home)
+Player:stock_in_backyard => 0
 Player.setActorVar(BUILDING_LOCATION_BACKYARD, 0)
 Player.setActorVar(BUILDING_LOCATION_BEDROOM, 1)
-Player.setActorVar(BUILDING_LOCATION_BATHROOM, 0)
+Player.setActorVar(BUILDING_LOCATION_BATHROOM, 1)
 Player.setActorVar(BUILDING_LOCATION_KITCHEN, 0)
 Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
 SceneEnd()

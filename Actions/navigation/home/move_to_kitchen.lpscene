@@ -6,5 +6,9 @@ OTHER:
 
 SceneStart()
 setBackgroundCustom(kitchen)
-
+Player.setActorVar(BUILDING_LOCATION_BACKYARD, 0)
+Player.setActorVar(BUILDING_LOCATION_BEDROOM, 0)
+Player.setActorVar(BUILDING_LOCATION_BATHROOM, 0)
+Player.setActorVar(BUILDING_LOCATION_KITCHEN, 1)
+Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
 SceneEnd()

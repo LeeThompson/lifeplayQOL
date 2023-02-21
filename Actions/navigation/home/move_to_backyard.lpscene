@@ -1,0 +1,27 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER:
+
+SceneStart()
+setBackground(street)
+If Player:stock_backyard > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard.lpworld)
+Endif
+If Player:stock_backyard_bbq > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_bbq.lpworld)
+Endif
+If Player:stock_backyard_gazebo > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo.lpworld)
+Endif
+If Player:stock_backyard_gazebo_bbq > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo_bbq.lpworld)
+Endif
+Player:stock_in_backyard => 1
+Player.setActorVar(BUILDING_LOCATION_BACKYARD, 1)
+Player.setActorVar(BUILDING_LOCATION_BEDROOM, 0)
+Player.setActorVar(BUILDING_LOCATION_BATHROOM, 0)
+Player.setActorVar(BUILDING_LOCATION_KITCHEN, 0)
+Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
+SceneEnd()
