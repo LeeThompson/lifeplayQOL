@@ -2,7 +2,7 @@ ACTION_UNIQUEID: drink_coffee_in
 ACTION_NAME: Drink coffee
 WHERE: home, work, fraternity
 WHEN: 0 - 24
-MINUTES: 5 - 20
+MINUTES: 5 - 10
 TIMEOUT_MINUTES: 120
 ALSO_TIMEOUT: drink_coffee, drink_tea, drink_tea_in
 EFFECTS:  stock_coffee -1 (START), mood +2 (END), energy +10 (DURATION), intoxication -25 (DURATION)
