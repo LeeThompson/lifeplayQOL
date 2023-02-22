@@ -5,10 +5,9 @@ WHO: none
 OTHER:
 
 SceneStart()
+currentRoom = 1
+previousRoom = Player.getActorVar(BUILDING_LOCATION)
+Player.setActorVar(BUILDING_PREVIOUS_LOCATION, previousRoom)
+Player.setActorVar(BUILDING_LOCATION, currentRoom)
 setBackground(home)
-Player.setActorVar(BUILDING_LOCATION_BACKYARD, 0)
-Player.setActorVar(BUILDING_LOCATION_BEDROOM, 1)
-Player.setActorVar(BUILDING_LOCATION_BATHROOM, 0)
-Player.setActorVar(BUILDING_LOCATION_KITCHEN, 0)
-Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
 SceneEnd()

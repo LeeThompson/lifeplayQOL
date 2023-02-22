@@ -5,23 +5,19 @@ WHO: none
 OTHER:
 
 SceneStart()
+currentRoom = 5
+previousRoom = Player.getActorVar(BUILDING_LOCATION)
+Player.setActorVar(BUILDING_PREVIOUS_LOCATION, previousRoom)
+Player.setActorVar(BUILDING_LOCATION, currentRoom)
 setBackground(street)
-If Player:stock_backyard > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard.lpworld)
-Endif
-If Player:stock_backyard_bbq > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_bbq.lpworld)
-Endif
-If Player:stock_backyard_gazebo > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo.lpworld)
-Endif
 If Player:stock_backyard_gazebo_bbq > 0
     setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo_bbq.lpworld)
+Elseif Player:stock_backyard_gazebo > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo.lpworld)
+Elseif Player:stock_backyard_bbq > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_bbq.lpworld)
+Elseif Player:stock_backyard > 0
+    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard.lpworld)
 Endif
 Player:stock_in_backyard => 1
-Player.setActorVar(BUILDING_LOCATION_BACKYARD, 1)
-Player.setActorVar(BUILDING_LOCATION_BEDROOM, 0)
-Player.setActorVar(BUILDING_LOCATION_BATHROOM, 0)
-Player.setActorVar(BUILDING_LOCATION_KITCHEN, 0)
-Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
 SceneEnd()

@@ -5,16 +5,14 @@ WHO: none
 OTHER:
 
 SceneStart()
+currentRoom = 3
+previousRoom = Player.getActorVar(BUILDING_LOCATION)
+Player.setActorVar(BUILDING_PREVIOUS_LOCATION, previousRoom)
+Player.setActorVar(BUILDING_LOCATION, currentRoom)
 setBackgroundCustom(toilets)
 If Player:stock_bathroom_nocurtain > 0
     setBackground3D(Modules/ltQualityOfLife/World/custom/home/bathroom_nocurtain.lpworld)
-Endif
-If Player:stock_bathroom_nobath > 0
+Elseif Player:stock_bathroom_nobath > 0
     setBackground3D(Modules/ltQualityOfLife/World/custom/home/bathroom_nobath.lpworld)
 Endif
-Player.setActorVar(BUILDING_LOCATION_BACKYARD, 0)
-Player.setActorVar(BUILDING_LOCATION_BEDROOM, 0)
-Player.setActorVar(BUILDING_LOCATION_BATHROOM, 1)
-Player.setActorVar(BUILDING_LOCATION_KITCHEN, 0)
-Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
 SceneEnd()

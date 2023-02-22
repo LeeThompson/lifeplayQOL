@@ -5,11 +5,17 @@ WHO: none
 OTHER:
 
 SceneStart()
-setBackgroundCustom(home)
+currentRoom = Player.getActorVar(BUILDING_PREVIOUS_LOCATION)
 Player:stock_in_backyard => 0
-Player.setActorVar(BUILDING_LOCATION_BACKYARD, 0)
-Player.setActorVar(BUILDING_LOCATION_BEDROOM, 1)
-Player.setActorVar(BUILDING_LOCATION_BATHROOM, 1)
-Player.setActorVar(BUILDING_LOCATION_KITCHEN, 0)
-Player.setActorVar(BUILDING_LOCATION_LIVINGROOM, 0)
+If currentRoom == 1
+    followUp(home_move_to_bedroom)
+Elseif currentRoom == 2
+    followUp(home_move_to_livingroom)
+Elseif currentRoom == 3
+    followUp(home_move_to_bathroom)
+Elseif currentRoom == 4
+    followUp(home_move_to_livingroom)
+Elseif
+    followUp(home_move_to_bedroom)
+Endif
 SceneEnd()

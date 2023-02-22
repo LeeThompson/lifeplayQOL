@@ -1,4 +1,4 @@
-ACTION_UNIQUEID: move_to_livingroom
+ACTION_UNIQUEID: home_move_to_livingroom
 ACTION_NAME: Move to living room
 WHERE: home
 WHEN: 0 - 24
@@ -8,5 +8,5 @@ ALSO_TIMEOUT:
 EFFECTS: 
 CONDITIONS:
 MOVE_FIRST: 
-SCENE_ALWAYS: move_to_livingroom
+SCENE_ALWAYS: home_move_to_livingroom
 ANIMATION: 

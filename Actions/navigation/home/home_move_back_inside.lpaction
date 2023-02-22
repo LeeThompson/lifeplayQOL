@@ -1,4 +1,4 @@
-ACTION_UNIQUEID: move_back_inside
+ACTION_UNIQUEID: home_move_back_inside
 ACTION_NAME: Move back inside
 WHERE: home
 WHEN: 0 - 24
@@ -8,5 +8,5 @@ ALSO_TIMEOUT:
 EFFECTS: 
 CONDITIONS: stock_in_backyard > 0.9 (STAT_COMPARE)
 MOVE_FIRST: 
-SCENE_ALWAYS: move_back_inside
+SCENE_ALWAYS: home_move_back_inside
 ANIMATION: 
