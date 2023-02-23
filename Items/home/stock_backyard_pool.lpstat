@@ -1,5 +1,5 @@
-STAT_ID: stock_backyard_gazebo_bbq
-STAT_NAME: Backyard with Gazebo and BBQ; Player's home has a backyard with a gazebo and a BBQ
+STAT_ID: stock_backyard_pool
+STAT_NAME: Pool; You have a swimming pool in your backyard.
 PLAYER_ONLY: true
 HIGHER_BETTER: true
 STAT_MIN: 0

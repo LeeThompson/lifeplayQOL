@@ -1,5 +1,5 @@
 STAT_ID: stock_backyard_gazebo
-STAT_NAME: Backyard with Gazebo; Player's home has a backyard with a gazebo
+STAT_NAME: Gazebo; You have a gazebo in your backyard.
 PLAYER_ONLY: true
 HIGHER_BETTER: true
 STAT_MIN: 0
