@@ -5,19 +5,39 @@ WHO: none
 OTHER:
 
 SceneStart()
-currentRoom = 5
-previousRoom = Player.getActorVar(BUILDING_LOCATION)
-Player.setActorVar(BUILDING_PREVIOUS_LOCATION, previousRoom)
-Player.setActorVar(BUILDING_LOCATION, currentRoom)
-setBackground(street)
-If Player:stock_backyard_gazebo_bbq > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo_bbq.lpworld)
-Elseif Player:stock_backyard_gazebo > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo.lpworld)
-Elseif Player:stock_backyard_bbq > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_bbq.lpworld)
-Elseif Player:stock_backyard > 0
-    setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard.lpworld)
+If Player:stock_backyard > 0
+    currentRoom = 5
+    previousRoom = Player.getActorVar(BUILDING_LOCATION)
+    Player.setActorVar(BUILDING_PREVIOUS_LOCATION, previousRoom)
+    Player.setActorVar(BUILDING_LOCATION, currentRoom)
+    setBackground(street)
+    If Player:stock_backyard_gazebo > 0 && Player:stock_backyard_bbq > 0 && Player:stock_backyard_pillory > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo_bbq_pillory.lpworld)
+    Elseif Player:stock_backyard_gazebo > 0 && Player:stock_backyard_bbq > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo_bbq.lpworld)
+    Elseif Player:stock_backyard_gazebo > 0 && Player:stock_backyard_pillory > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo_pillory.lpworld)
+    Elseif Player:stock_backyard_gazebo > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_gazebo.lpworld)
+    Elseif Player:backyard_pool > 0 && Player:stock_backyard_bbq > 0 && Player:stock_backyard_pillory > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_pool_bbq_pillory.lpworld)
+    Elseif Player:backyard_pool > 0 && Player:stock_backyard_bbq > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_pool_bbq.lpworld)
+    Elseif Player:backyard_pool > 0 && Player:stock_backyard_pillory > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_pool_pillory.lpworld)
+    Elseif Player:backyard_pool > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_pool.lpworld)
+    Elseif Player:stock_backyard_bbq > 0 && Player:stock_backyard_pillory > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_bbq_pillory.lpworld)
+    Elseif Player:stock_backyard_bbq > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_bbq.lpworld)
+    Elseif Player:stock_backyard_pillory > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard_pillory.lpworld)
+    Elseif Player:stock_backyard > 0
+        setBackground3D(Modules/ltQualityOfLife/World/custom/home/backyard.lpworld)
+    Endif
+    Player:stock_in_backyard => 1
+Elseif
+    Player:: "(Oh yeah, I don't have a backyard here.)"
 Endif
-Player:stock_in_backyard => 1
 SceneEnd()
