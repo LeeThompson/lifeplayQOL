@@ -1,5 +1,5 @@
 # Quality of Life
-## For LifePlay
+> a module for LifePlay
 
 A collection of simple Quality of Life modifications for [LifePlay](https://vinfamy.itch.io/lifeplay).
 
