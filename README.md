@@ -20,3 +20,6 @@
 * Quality of Life tweaks to the game
 
 *NOTE: This project is still very early in development and not all features are implemented yet.*
+
+-----
+[My Ohter LifePlay Projects](https://github.com/LeeThompson/lifeplay) 
