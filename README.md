@@ -3,7 +3,6 @@
 
 -----
 **NOTICE: While LifePlay is an adult simulation RPG, this module contains no adult material.**
-
 -----
 ## Features
 
@@ -22,4 +21,4 @@
 *NOTE: This project is still very early in development and not all features are implemented yet.*
 
 -----
-[My Ohter LifePlay Projects](https://github.com/LeeThompson/lifeplay) 
+[My Other LifePlay Projects](https://github.com/LeeThompson/lifeplay) 
