@@ -1,0 +1,29 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER:
+
+SceneStart()
+thisRoom = 1
+thisBuilding = 2
+currentBuilding = Player.getActorVar(BUILDING_CURRENT)
+currentRoom = Player.getActorVar(BUILDING_LOCATION)    
+If currentBuilding != thisBuilding
+    Player.setActorVar(BUILDING_PREVIOUS, currentBuilding)
+    Player.setActorVar(BUILDING_CURRENT, thisBuilding)
+    currentRoom = 1
+Endif
+If currentRoom != thisRoom
+    Player.setActorVar(BUILDING_PREVIOUS_LOCATION, currentRoom)
+    Player.setActorVar(BUILDING_LOCATION, thisRoom)
+Endif
+If thisBuilding == 2
+    Player:stock_dungeon => 0
+    Player:stock_manageroffice => 0
+    Player:stock_main => 1
+    Player:stock_examination => 0
+    Player:stock_bathroom => 0
+Endif
+setBackgroundCustom(work)
+SceneEnd()

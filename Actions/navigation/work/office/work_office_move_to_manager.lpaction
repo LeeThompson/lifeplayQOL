@@ -1,0 +1,12 @@
+ACTION_UNIQUEID: work_office_move_to_manager
+ACTION_NAME: Move to manager's office
+WHERE: work
+WHEN: 0 - 24
+MINUTES: 1-2
+TIMEOUT_MINUTES: 0
+ALSO_TIMEOUT: 
+EFFECTS: 
+CONDITIONS:
+MOVE_FIRST: 
+SCENE_ALWAYS: work_office_move_to_manager
+ANIMATION: 
