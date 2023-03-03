@@ -46,7 +46,7 @@ OTHER:
             If Player.isMale()
                 Filter(Handjob)
             Else
-                Filter(FingerPussy)
+                Filter(Fingering)
             Endif
             Sex(Player, Actor)
             
@@ -76,7 +76,7 @@ OTHER:
                 If Player.isMale()
                     Filter(Blowjob)
                 Else
-                    Filter(LickPussy)
+                    Filter(Licking)
                 Endif
                 Sex(Player, Actor)
                 
