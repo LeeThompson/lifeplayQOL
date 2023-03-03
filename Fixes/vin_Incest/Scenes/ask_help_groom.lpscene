@@ -10,7 +10,7 @@ OTHER:
     "Am I sure that I want to ask my own <Actor.relationship> to help me groom my private region down there?"
     0:: "Yes"
     1:: "No"
-    
+
     If 0
         attractiveness += 0.25
         fitness += 0.1
@@ -23,7 +23,7 @@ OTHER:
         "I've become quite aroused ..."
         0:: "Ask my <Actor.relationship> to touch me more"
         1:: "Try and stay composed"
-        
+
         If 0
             If Actor:incest > 10
                 Ahead = true
@@ -35,25 +35,25 @@ OTHER:
         Else
             Ahead = false
         Endif
-        
+
         If !Ahead && Actor:incest > 30
             Ahead = true
             Actor:: "I see you're getting <Player.hard_or_wet> ... Here, let me help you relax a bit."
         Endif
-        
+
         If Ahead
             Actor:incest += 10
             If Player.isMale()
                 Filter(Handjob)
             Else
-                Filter(Fingering)
+                Filter(RubPussy)
             Endif
             Sex(Player, Actor)
-            
+
             "Wow, that felt so good ... and my body is telling me not to stop"
             0:: "Ask my <Actor.relationship> to use <Actor.his_or_her> mouth"
             1:: "Try and regain composure"
-            
+
             If 0
                 If Actor:incest > 30
                     Ahead = true
@@ -65,12 +65,12 @@ OTHER:
             Else
                 Ahead = false
             Endif
-                
+
             If !Ahead && Actor:incest > 50
                 Ahead = true
                 Actor:: "I see my hand wasn't enough to satisfy you ... Let me try use my mouth instead."
             Endif
-            
+
             If Ahead
                 Actor:incest += 10
                 If Player.isMale()
@@ -79,11 +79,11 @@ OTHER:
                     Filter(Licking)
                 Endif
                 Sex(Player, Actor)
-                
+
                 "Things are escalating very quickly"
                 0:: "Ask my <Actor.relationship> to fuck me"
                 1:: "Try and regain composure"
-                
+
                 If 0
                     If Actor:incest > 50
                         Ahead = true
@@ -95,12 +95,12 @@ OTHER:
                 Else
                     Ahead = false
                 Endif
-                    
+
                 If !Ahead && Actor:incest > 70
                     Ahead = true
                     Actor:: "I see that even my mouth wasn't enough to satisfy you ... I guess I have to give you everything I have to offer."
                 Endif
-                
+
                 If Ahead
                     Actor:incest += 20
                     Sex(Player, Actor)
