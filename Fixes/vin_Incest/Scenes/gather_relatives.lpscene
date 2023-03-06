@@ -2,8 +2,9 @@ WHAT: none
 WHERE: none
 WHEN: 0-24
 WHO: none
-OTHER:
+OTHER: isModEnabled(vin_Incest)
 
+    // Bugfix
     SceneStart()
     setBackgroundCustom(livingroom)
     "Which relatives should I gather together?"

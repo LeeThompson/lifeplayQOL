@@ -2,7 +2,9 @@ WHAT: all
 WHERE: home
 WHEN: 0 - 24
 WHO: Actor = getSpecific(Dating); Actor2 = getCreature(); If Actor.isFemale() && Actor:perversion > 50 && Actor2.isCreatureType(Dog)
-OTHER: Player.isFemale()
+OTHER: Player.isFemale() && isModEnabled(vin_Bestiality)
+
+    // Bugfixed with some enhancements
 
     SceneStart()
     Fuck = false

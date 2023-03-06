@@ -2,10 +2,10 @@ WHAT: none
 WHERE: none
 WHEN: 0-24
 WHO: none
-OTHER:
+OTHER: isModEnabled(vin_Incest)
 
+    // Bugfix
     // You can click on any relative and ask them to help you groom your private region, which could lead to things escalating fast
-
     SceneStart()
     "Am I sure that I want to ask my own <Actor.relationship> to help me groom my private region down there?"
     0:: "Yes"
