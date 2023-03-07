@@ -1,0 +1,70 @@
+LifePlay: Quality of Life Module
+=============================================
+
+The "Fixes" folder contains unofficial fixes for other LifePlay content.
+
+The appropriate mods need to be enabled for various content to be shown.
+
+These fixes apply to LifePlay 5.24, use with earlier versions of LifePlay *may* work but is not recommended.
+
+If this release of the QOL module is not "release" status, assume that these changes are not yet fully tested.
+
+
+202303261610
+    vin_Base:
+        friend_bachelor_party
+            * Fixed: Syntax error causing the event to trigger without loading the actors.
+            * Fixed: Would allow Player character to have sex with bride/groom if they were related.
+                    (Now requires vin_Incest to be enabled and a relationship established.)
+            * Fixed: Scene will only play if the bride and groom have loaded properly.
+            * Enhancement: More careful actor loading and generation with dynamic adjustments if something fails.
+            * Enhancement: New scene if vin_Netori is enabled and the soon-to-be Spouse is a cuckold.
+            * Enhancement: Generated strippers are now guaranteed to be interested in sexual activities.
+            
+    vin_BDSM
+        master_to_slave
+            * Fixed: Was not checking for vin_Incest
+            * Fixed: Fixed an error in the dialog when a submissive wishes to join
+            * Fixed: Various typos
+            * Enhancement: Removed gender restrictions.
+            * Enhancement: More careful actor loading and generation.
+            * Enhancement: Generated actors should be guranteed to actually be interested.
+            * Enhancement: Some new options.
+            * Enhancement: New scenes depending on what mods are enabled.
+            
+    vin_Bestiality
+        gf_suggests_cms
+            * Enhancement: The girlfriend will now remember previous requests and now a new scene will play as a 'repeat' option.
+            * Enhancement: More robust actor loading and generation.
+            * Enhancement: Various other small improvements.
+        
+    vin_Incest    
+        ask_help_groom
+            * Fixed: Could get into a state where "no suitable animations" were available.
+            
+        gather_relatives
+            * Fixed: Logic error caused some actors not to be included.
+        
+    vin_Netori
+        boss_errand_child
+            * Fixed: Sometimes did not properly detect relationship
+            * Enhancement: If the actors do not load properly it will simply skip the event with no cooldown timer.
+            
+        boss_errand_parent
+            * Fixed: Sometimes did not properly detect relationship
+            * Enhancement: If generation is needed, it will ensure interest is appropriate.
+            * Enhancement: If the actors do not load properly it will simply skip the event with no cooldown timer.
+    
+    vin_Polyamorous
+        poly_couple_repeats
+            * Fixed: Error in scene actor logic.
+            * Enhancement: If the actors do not load properly it will simply skip the event with no cooldown timer.
+    
+    vin_Pregnancy
+        pregnancy_cheat_f
+            * Fixed: This scene repeats (unless the relationship or pregnancy is terminated), now it will timeout an accepting response.
+            * Fixed: Impregnate option now takes player character's gender and baby daddy's species.
+            * Fixed: Made the event not occur at all if it's an open relationship.
+            * Enhancement: If the actors do not load properly it will simply skip the event with no cooldown timer.
+
+        

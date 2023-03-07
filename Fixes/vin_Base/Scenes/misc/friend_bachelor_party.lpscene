@@ -65,7 +65,8 @@ OTHER:
                         If Actor2.isSameGender(Actor)
                             boolCreateGuest = false
                         Endif
-                    Else
+                    Endif
+                    If boolCreateGuest
                         If maxcount > 0
                             If count > maxcount
                                 boolCreateGuest = false
@@ -97,7 +98,8 @@ OTHER:
                         If Actor3.isSameGender(Actor)
                             boolCreateGuest = false
                         Endif
-                    Else
+                    Endif
+                    If boolCreateGuest
                         If maxcount > 0
                             If count > maxcount
                                 boolCreateGuest = false
@@ -165,7 +167,8 @@ OTHER:
                                 If !Fuck.isSameGender(Actor)
                                     boolCreateStripper = false
                                 Endif
-                            Else
+                            Endif
+                            If boolCreateStripper
                                 If maxcount > 0
                                     If count > maxcount
                                         boolCreateStripper = false
@@ -181,6 +184,7 @@ OTHER:
                             Fuck:likes_vaginal => Random(0, 35)
                             Fuck:likes_anal => Random(0, 35)
                             Fuck:likes_doggy => Random(0, 35)
+                            Fuck:likes_missionary => Random(0, 35)
                             Fuck:likes_rough => Random(-10, 15)
                             Fuck:likes_cowgirl => Random(-5, 25)
                             Fuck:likes_rcowgirl => Random(-5, 25)
@@ -212,7 +216,8 @@ OTHER:
                                 If !Fuck2.isSameGender(Actor)
                                     boolCreateStripper = false
                                 Endif
-                            Else
+                            Endif
+                            If boolCreateStripper
                                 If maxcount > 0
                                     If count > maxcount
                                         boolCreateStripper = false
@@ -228,6 +233,7 @@ OTHER:
                             Fuck2:likes_vaginal => Random(0, 35)
                             Fuck2:likes_anal => Random(0, 35)
                             Fuck2:likes_doggy => Random(0, 35)
+                            Fuck2:likes_missionary => Random(0, 35)
                             Fuck2:likes_rough => Random(-10, 15)
                             Fuck2:likes_cowgirl => Random(-5, 25)
                             Fuck2:likes_rcowgirl => Random(-5, 25)
@@ -259,7 +265,8 @@ OTHER:
                                 If !Fuck3.isSameGender(Actor)
                                     boolCreateStripper = false
                                 Endif
-                            Else
+                            Endif
+                            If boolCreateStripper
                                 If maxcount > 0
                                     If count > maxcount
                                         boolCreateStripper = false
@@ -275,6 +282,7 @@ OTHER:
                             Fuck3:likes_vaginal => Random(0, 35)
                             Fuck3:likes_anal => Random(0, 35)
                             Fuck3:likes_doggy => Random(0, 35)
+                            Fuck3:likes_missionary => Random(0, 35)
                             Fuck3:likes_rough => Random(-10, 15)
                             Fuck3:likes_cowgirl => Random(-5, 25)
                             Fuck3:likes_rcowgirl => Random(-5, 25)
@@ -306,7 +314,8 @@ OTHER:
                                 If !Fuck4.isSameGender(Actor)
                                     boolCreateStripper = false
                                 Endif
-                            Else
+                            Endif
+                            If boolCreateStripper
                                 If maxcount > 0
                                     If count > maxcount
                                         boolCreateStripper = false
@@ -322,6 +331,7 @@ OTHER:
                             Fuck4:likes_vaginal => Random(0, 35)
                             Fuck4:likes_anal => Random(0, 35)
                             Fuck4:likes_doggy => Random(0, 35)
+                            Fuck4:likes_missionary => Random(0, 35)
                             Fuck4:likes_rough => Random(-10, 15)
                             Fuck4:likes_cowgirl => Random(-5, 25)
                             Fuck4:likes_rcowgirl => Random(-5, 25)
@@ -473,7 +483,8 @@ OTHER:
                                 If !Fuck.isSameGender(Actor)
                                     boolCreateStripper = false
                                 Endif
-                            Else
+                            Endif
+                            If boolCreateStripper
                                 If maxcount > 0
                                     If count > maxcount
                                         boolCreateStripper = false
@@ -489,6 +500,7 @@ OTHER:
                             Fuck:likes_vaginal => Random(0, 35)
                             Fuck:likes_anal => Random(0, 35)
                             Fuck:likes_doggy => Random(0, 35)
+                            Fuck:likes_missionary => Random(0, 35)
                             Fuck:likes_rough => Random(-10, 15)
                             Fuck:likes_cowgirl => Random(-5, 25)
                             Fuck:likes_rcowgirl => Random(-5, 25)
@@ -626,7 +638,6 @@ OTHER:
         Else
             "I argued that there was still plenty of time before the wedding for such a party. No need to plan it now."
         Endif
-
 
         If boolGetMarried
             removeNpcRelationship(Actor0, Actor1)

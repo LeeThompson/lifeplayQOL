@@ -5,9 +5,9 @@ WHO: Actor = getSpecific(Boss); If Actor:age > age + 15 + likes_older*0.5 && Act
 OTHER: isModEnabled(vin_OldYoung) && isModEnabled(vin_Netori)
 
     // BugFix
+    maxcount = Random(5, 10)
     If Actor.isValid()
         count = 0
-        maxcount = Random(5, 10)
         boolLoadActor = true
         While boolLoadActor
             count += 1
@@ -19,15 +19,18 @@ OTHER: isModEnabled(vin_OldYoung) && isModEnabled(vin_Netori)
             Else
                 boolLoadActor = false
             Endif
-            If count > maxcount
-                boolLoadActor = false
+            If boolLoadActor
+                If maxcount > 0
+                    If count > maxcount
+                        boolLoadActor = false
+                    Endif
+                Endif
             Endif
         Endwhile
 
         If !Actor1.isValid()
-            boolCreateActor = true
             count = 0
-            maxcount = Random(5, 10)
+            boolCreateActor = true
             While boolCreateActor
                 count += 1
                 Actor1 = Actor.generatePersonTemporaryMatchRace()
@@ -38,20 +41,33 @@ OTHER: isModEnabled(vin_OldYoung) && isModEnabled(vin_Netori)
                 Else
                     boolCreateActor = false
                 Endif
-                If count > maxcount
-                    boolCreateActor = false
+                If boolCreateActor
+                    If maxcount > 0
+                        If count > maxcount
+                            boolCreateActor = false
+                        Endif
+                    Endif
                 Endif
             Endwhile
             If Actor1.isValid()
                 Actor1.makeInterested(Player)
-
+                Actor1.makePermanent()
                 Actor1:age => Actor:age + Random(20, 30)
                 Actor1.randomizeFace()
                 Actor1.randomizeHairs()
                 Actor1:likes_older => 2*[age - Actor:age]
                 Actor1:attractiontoplayer += Random(25, 50)
-
-                Actor1.makePermanent()
+                Actor1:likes_oral => Random(15, 35)
+                Actor1:likes_handjob => Random(15, 35)
+                Actor1:likes_missionary => Random(15, 35)
+                Actor1:likes_cowgirl => Random(15, 35)
+                Actor1:likes_rcowgirl => Random(15, 35)
+                Actor1:likes_doggy => Random(15, 35)
+                If Player.isMale() || Player.isTrans()
+                    Actor1:likes_anal => Random(20, 35)
+                Elseif Player.isFemale()
+                    Actor1:likes_vaginal => Random(20, 35)
+                Endif
                 addNpcRelationship(ParentChild, Actor1, Actor)
             Endif
         Endif

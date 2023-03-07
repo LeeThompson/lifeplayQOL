@@ -22,6 +22,9 @@ OTHER: isModEnabled(vin_Polyamorous)
             Actor1.show()
             "I came over for dinner with the kinky couple and soon enough we ended up in the bedroom together"
             setBackground(home)
+            Actor0.strip()
+            Actor1.strip()
+            Player.strip()
             Sex(Actor0, Actor1, Player)
 
             If Actor0.isInterestedIn(Player)
